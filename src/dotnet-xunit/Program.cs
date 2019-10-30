@@ -423,11 +423,19 @@ class Program
 
     int RunDotNetCoreProject(string outputPath, string assemblyName, string targetFileName, string extraArgs, string fxVersion, string netCoreAppVersion)
     {
+        const string fallbackNetCoreAppVersion = "netcoreapp2.0";
+
         var consoleFolder = Path.GetFullPath(Path.Combine(ThisAssemblyPath, "..", "..", "tools", netCoreAppVersion));
 
         // Debug hack to be able to run from the compilation folder
         if (!Directory.Exists(consoleFolder))
             consoleFolder = Path.GetFullPath(Path.Combine(ThisAssemblyPath, "..", "..", "..", "..", "xunit.console", "bin", "Debug", netCoreAppVersion));
+
+        if (!Directory.Exists(consoleFolder))
+            consoleFolder = Path.GetFullPath(Path.Combine(ThisAssemblyPath, "..", "..", "tools", fallbackNetCoreAppVersion));
+
+        if (!Directory.Exists(consoleFolder))
+            consoleFolder = Path.GetFullPath(Path.Combine(ThisAssemblyPath, "..", "..", "..", "..", "xunit.console", "bin", "Debug", fallbackNetCoreAppVersion));
 
         if (!Directory.Exists(consoleFolder))
         {

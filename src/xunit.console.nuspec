@@ -17,8 +17,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="xunit.console\bin\$Configuration$\netcoreapp1.0\xunit.console.dll" target="lib\netcoreapp1.0\" />
-
     <file src="xunit.console\bin\$Configuration$\netcoreapp2.0\xunit.console.dll" target="lib\netcoreapp2.0\" />
   </files>
 </package>

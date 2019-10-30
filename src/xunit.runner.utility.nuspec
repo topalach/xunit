@@ -25,15 +25,6 @@
         <dependency id="System.Reflection.TypeExtensions" version="4.3.0" />
         <dependency id="xunit.abstractions" version="2.0.1" />
       </group>
-      <group targetFramework="netcoreapp1.0">
-        <dependency id="NETStandard.Library" version="1.6.0" />
-        <dependency id="System.Runtime.Loader" version="4.0.0" />
-        <dependency id="xunit.abstractions" version="2.0.1" />
-      </group>
-      <group targetFramework="uap10.0">
-        <dependency id="Microsoft.NETCore.UniversalWindowsPlatform" version="5.2.3" />
-        <dependency id="xunit.abstractions" version="2.0.1" />
-      </group>
     </dependencies>
   </metadata>
   <files>
@@ -49,11 +40,5 @@
     <file src="xunit.runner.utility\bin\$Configuration$\netstandard1.5\xunit.runner.utility.netstandard15.dll" target="lib\netstandard1.5\" />
     <file src="xunit.runner.utility\bin\$Configuration$\netstandard1.5\xunit.runner.utility.netstandard15.xml" target="lib\netstandard1.5\" />
 
-    <file src="xunit.runner.utility\bin\$Configuration$\netcoreapp1.0\xunit.runner.utility.netcoreapp10.dll" target="lib\netcoreapp1.0\" />
-    <file src="xunit.runner.utility\bin\$Configuration$\netcoreapp1.0\xunit.runner.utility.netcoreapp10.xml" target="lib\netcoreapp1.0\" />
-
-    <file src="xunit.runner.utility\bin\$Configuration$\uap10.0\xunit.runner.utility.uwp10.dll" target="lib\uap10.0\" />
-    <file src="xunit.runner.utility\bin\$Configuration$\uap10.0\xunit.runner.utility.uwp10.xml" target="lib\uap10.0\" />
-    <file src="xunit.runner.utility\bin\$Configuration$\uap10.0\xunit.runner.utility.uwp10.pri" target="lib\uap10.0\" />
   </files>
 </package>
