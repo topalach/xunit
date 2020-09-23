@@ -448,8 +448,10 @@ class Program
         var targetFileNameWithoutExtension = Path.GetFileNameWithoutExtension(targetFileName);
         var depsFile = targetFileNameWithoutExtension + ".deps.json";
         var runtimeConfigJson = targetFileNameWithoutExtension + ".runtimeconfig.json";
-
-        var args = $@"exec --fx-version {fxVersion} --depsfile ""{depsFile}"" ";
+        
+        var args = string.IsNullOrEmpty(fxVersion)
+            ? $@"exec --depsfile ""{depsFile}"" "
+            : $@"exec --fx-version {fxVersion} --depsfile ""{depsFile}"" ";
 
         if (File.Exists(Path.Combine(workingDirectory, runtimeConfigJson)))
             args += $@"--runtimeconfig ""{runtimeConfigJson}"" ";
